@@ -1,0 +1,12 @@
+{
+  "name": "express-webpack-routing-setup",
+  "version": "1.0.0",
+  "description": "simple yet elegent solution for multiple project under one scope",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Henry Pap, onkelhoy@gmail.com",
+  "license": "MIT"
+}
