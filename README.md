@@ -4,10 +4,10 @@ Webpack & Express
 
 ## Add a new Project
 In order to add a new project follow the guide below
-- navigate to source folder
-- create folder with project-name
-- create an app.js  
-- create a template file 
+1. navigate to source folder
+2. create folder with project-name
+3. create an app.js  
+4. create a template file 
 
 The app.js uses es6 so imports are ok, scss is also used (just make sure to import it in the app.js file).
 For now the template file is only in pug, in the future it will 
