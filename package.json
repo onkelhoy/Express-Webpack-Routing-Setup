@@ -13,6 +13,14 @@
       "es2015"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onkelhoy/Express-Webpack-Routing-Setup.git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onkelhoy/Express-Webpack-Routing-Setup.git/issues"
+  },
+  "homepage": "https://github.com/onkelhoy/Express-Webpack-Routing-Setup.git#readme",
   "author": "Henry Pap, onkelhoy@gmail.com",
   "license": "MIT",
   "dependencies": {
