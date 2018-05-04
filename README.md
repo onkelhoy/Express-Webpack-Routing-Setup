@@ -14,6 +14,8 @@ For now the template file is only in pug, in the future it will
 
 
 ## Todo List
-- [ ] Split enviroments (dev/prod)
+- [x] Split enviroments (dev/prod)
+  - [x] create a dev and prod for webpack
+  - [x] create a default
 - [ ] Use of enviroment files and bin files 
-- [ ] template should be both pug or html
+- [x] template should be both pug or html
