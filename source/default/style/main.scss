@@ -1,0 +1,27 @@
+body {
+  ul.applications {
+    list-style: none;
+
+    li {
+      font-size: 16pt;
+      
+
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 5px;
+        background-color: aliceblue;
+        width: 180px;
+        padding-left: 50px;
+        margin-bottom: 10px;
+        border-bottom: 4px solid orange;
+        transition: all .1s ease-in;
+
+        &:hover {
+          padding-left: 80px;
+        }
+      }
+    }
+  }
+
+}

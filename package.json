@@ -4,9 +4,10 @@
   "description": "simple yet elegent solution for multiple project under one scope",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "build": "cross-env NODE_ENV=production webpack"
+    "server:prod": "cross-env NODE_ENV=production node server",
+    "webpack:prod": "cross-env NODE_ENV=production webpack",
+    "prod": "npm run server:prod | npm run webpack:prod",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server "
   },
   "babel": {
     "presets": [
@@ -40,6 +41,7 @@
     "pug": "^2.0.3",
     "pug-html-loader": "^1.1.5",
     "sass-loader": "^7.0.1",
+    "start-server-webpack-plugin": "^2.2.5",
     "style-loader": "^0.21.0",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.1.2",

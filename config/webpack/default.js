@@ -12,6 +12,7 @@ const config = {
   mode: process.env.NODE_ENV,
   context: SOURCE_PATH,
   entry: {},
+  watch: true,
   output: {
     filename: '[name]/bundle.js',
     path: path.join(MAIN_PATH, 'apps')
@@ -20,16 +21,20 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        include: /apps/,
+        include: /source/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
         test: /\.s?css$/,
-        include: /apps/,
+        include: /source/,
+        exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.pug$/,
+        include: /source/,
+        exclude: /node_modules/,
         use: ['html-loader', 'pug-html-loader']
       }
     ]
@@ -55,28 +60,17 @@ fs.readdirSync(SOURCE_PATH).map(app => {
     if (!template)
       throw new Error('There is no template file in your project: ' + app)
     const EXT = template[2] // takes the extension
-
+    // now we push to plugins
     config.plugins.push(
       new HtmlWebpackPlugin({
         filename: app + '/index.html',
-        template: path.resolve(__dirname, '..', 'source', app, 'template.'+EXT),
+        template: path.join(DIR_PATH, 'template.'+EXT),
         title: app,
         chunks: [app],
       })
     )
   }
 })
-// for (let app of apps) {
-//   config.entry[app] = `./${app}/app.js`
-//   config.plugins.push(
-//     new HtmlWebpackPlugin({
-//       filename: app + '/index.html',
-//       template: path.resolve(__dirname, '..', 'source', app, 'index.pug'),
-//       title: app,
-//       chunks: [app],
-//     })
-//   )
-// }
 
 module.exports = config 
 
